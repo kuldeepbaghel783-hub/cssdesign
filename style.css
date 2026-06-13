@@ -53,9 +53,14 @@ body{
 
 
 .hero{
-    width:100%;
-    height:calc(100vh - 90px);
-    padding:40px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.left,
+.right{
+    flex:1;
 }
 
 .left{
@@ -113,14 +118,14 @@ body{
     display:none;
 }
 
-
+/* Mobile View */
 @media screen and (max-width: 768px) {
 
     .navbar{
-        padding:15px 20px;
         display:flex;
         justify-content:space-between;
         align-items:center;
+        padding:10px 20px;
     }
 
     .logo{
@@ -128,18 +133,75 @@ body{
         font-size:24px;
     }
 
-   
     .nav-links{
-        display:none;
+        display:none;   /* Hide Home, About, Services, Contact */
     }
 
-    
-   
+    .username{
+        display:block;
+        width:auto;
+    }
 
-   
+    .username button{
+        padding:10px 15px;
+        font-size:14px;
+    }
+
+    .hero{
+        display:flex;
+        flex-direction:column;
+        padding:20px;
+        height:auto;
+    }
+
+    .left{
+        width:100%;
+        margin-top:20px;
+        order:1;
+    }
+
+    .right{
+        width:100%;
+        order:2;
+        margin-top:30px;
+    }
+
+    .left h1{
+        font-size:32px;
+        line-height:1.2;
+    }
+
+    .left p{
+        font-size:18px;
+        line-height:1.5;
+    }
+
+    .btn{
+        display:inline-block;
+        padding:16px 30px;
+        font-size:18px;
+        margin-top:25px;
+    }
+
+    .right img{
+        width:90%;
+        max-width:300px;
+    }
+}
+
+.menu-btn{
+    display:none;
+}
+
+@media screen and (max-width:768px){
+
     .menu-btn{
         display:block;
-        font-size:30px;
+        font-size:32px;
         cursor:pointer;
+    }
+
+    .nav-links{
+        display:none;
     }
 }
